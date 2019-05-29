@@ -89,6 +89,7 @@ alias use-context="kubectl config use-context"
 alias kd="kubectl describe"
 alias kdel="kubectl delete"
 alias ked="kubectl edit"
+alias kx="kubectl exec -ti"
 export EDITOR="nano -m"
 
 alias knord="sudo ~/.tools/nordvpn.sh"
