@@ -3,7 +3,7 @@
     "telemetry.enableCrashReporter": false,
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
-    "trailing-spaces.trimOnSave": false,
+    "trailing-spaces.trimOnSave": true,
     "window.zoomLevel": 1,
     "editor.scrollBeyondLastLine": false,
     "editor.minimap.enabled": false,
@@ -56,5 +56,6 @@
     "terraform.telemetry.enabled": false,
     "vsicons.dontShowNewVersionMessage": true,
     "aws.profile": "profile:default",
-    "aws.onDefaultRegionMissing": "add"
+    "aws.onDefaultRegionMissing": "add",
+    "metals.javaHome": "/Users/fernando/.jabba/jdk/adopt@1.11.0-6/Contents/Home"
 }

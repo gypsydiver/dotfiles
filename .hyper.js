@@ -6,7 +6,7 @@ module.exports = {
   config: {
     // choose either `'stable'` for receiving highly polished,
     // or `'canary'` for less polished but more frequent updates
-    updateChannel: 'stable',
+    updateChannel: 'canary',
 
     // default font size in pixels for all tabs
     fontSize: 13,
@@ -82,7 +82,7 @@ module.exports = {
       cyan: '#6FC1FF',
       white: '#FFFFFF',
       orange: '#B084EB',
-      // lightBlack: '#686868',
+      lightBlack: '#686868',
       lightRed: '#FF2C6D',
       lightGreen: '#19f9d8',
       lightYellow: '#ffcc95',
@@ -92,53 +92,22 @@ module.exports = {
       lightWhite: '#FFFFFF',
     },
 
-    // the shell to run when spawning a new session (i.e. /usr/local/bin/fish)
-    // if left empty, your system's login shell will be used by default
-    //
-    // Windows
-    // - Make sure to use a full path if the binary name doesn't work
-    // - Remove `--login` in shellArgs
-    //
-    // Bash on Windows
-    // - Example: `C:\\Windows\\System32\\bash.exe`
-    //
-    // PowerShell on Windows
-    // - Example: `C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe`
     shell: '/bin/zsh',
-
-    // for setting shell arguments (i.e. for using interactive shellArgs: `['-i']`)
-    // by default `['--login']` will be used
     shellArgs: ['--login'],
 
     // for environment variables
     env: {},
 
     // set to `false` for no bell
-    bell: 'SOUND',
+    bell: false,
 
     // if `true` (without backticks and without quotes), selected text will automatically be copied to the clipboard
     copyOnSelect: false,
 
     // if `true` (without backticks and without quotes), hyper will be set as the default protocol client for SSH
     defaultSSHApp: true,
-
-    // if `true` (without backticks and without quotes), on right click selected text will be copied or pasted if no
-    // selection is present (`true` by default on Windows and disables the context menu feature)
-    // quickEdit: true,
-
-    // URL to custom bell
-    // bellSoundURL: 'http://example.com/bell.mp3',
-
-    // for advanced config flags please refer to https://hyper.is/#cfg
   },
 
-  // a list of plugins to fetch and install from npm
-  // format: [@org/]project[#version]
-  // examples:
-  //   `hyperpower`
-  //   `@company/project`
-  //   `project#1.0.1`
-  // plugins:   ["hyperterm-panda"],
   plugins: [],
 
   // in development, you can create a directory under
@@ -146,8 +115,5 @@ module.exports = {
   // to load it and avoid it being `npm install`ed
   localPlugins: [],
 
-  keymaps: {
-    // Example
-    // 'window:devtools': 'cmd+alt+o',
-  },
+  keymaps: {},
 };

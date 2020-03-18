@@ -1,23 +1,9 @@
 ZSH_TMUX_AUTOSTART="true"
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/fernando/.oh-my-zsh
-
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="amuse"
-
-# Uncomment the following line to use case-sensitive completion.
+ZSH_THEME="typewritten"
 CASE_SENSITIVE="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
 export UPDATE_ZSH_DAYS=5
-
-# Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -33,17 +19,6 @@ source $ZSH/oh-my-zsh.sh
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-   export EDITOR='nano'
-else
-   export EDITOR='nano'
-fi
-
-# nvm
-export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
 
 #GO
 export GOPATH=/Users/fernando/Development/go
@@ -90,9 +65,9 @@ alias kd="kubectl describe"
 alias kdel="kubectl delete"
 alias ked="kubectl edit"
 alias kx="kubectl exec -ti"
-export EDITOR="nano -m"
+export EDITOR="nano -m -c"
 
-alias knord="sudo ~/.tools/nordvpn.sh"
+alias knrd="sudo ~/.tools/vpn.sh"
 
 back() {
   cd $OLDPWD
@@ -106,9 +81,23 @@ alias cat="bat"
 alias unstage="git reset HEAD"
 alias gfp="git fetch -p"
 
-alias bruce="saml2aws login -a bruce; export AWS_PROFILE=bruce"
-alias wonder="saml2aws login -a wonderwoman; export AWS_PROFILE=wonderwoman"
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+PROMPT_BACKUP=$PROMPT
 
+# AWS
+function aws_prof {
+  source _awsp
+  local profile="${AWS_PROFILE:=default}"
+  PROMPT="%{$fg_bold[blue]%}aws:(%{$fg[yellow]%}${profile}%{$fg_bold[blue]%})%{$reset_color%} "$PROMPT_BACKUP
+}
+
+function aws_done {
+  PROMPT=$PROMPT_BACKUP
+}
+
+alias awsp="aws_prof"
+alias done="aws_done"
+awsp
