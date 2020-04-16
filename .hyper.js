@@ -9,7 +9,7 @@ module.exports = {
     updateChannel: 'canary',
 
     // default font size in pixels for all tabs
-    fontSize: 13,
+    fontSize: 14,
 
     // font family with optional fallbacks
     fontFamily: 'Hasklig',
@@ -27,7 +27,7 @@ module.exports = {
     letterSpacing: 0,
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
-    cursorColor: 'rgba(248,28,229,0.8)',
+    cursorColor: 'rgba(251,252,252,0.8)',
 
     // terminal text color under BLOCK cursor
     cursorAccentColor: '#000',
@@ -39,11 +39,11 @@ module.exports = {
     cursorBlink: false,
 
     // color of the text
-    foregroundColor: '#E6E6E6',
+    foregroundColor: '#cbe3e7',
 
     // terminal background color
     // opacity is only supported on macOS
-    backgroundColor: 'rgba(0,0,0,0.3)',
+    backgroundColor: 'rgba(30,20,49,0.3)',
 
     // terminal selection color
     selectionColor: 'rgba(248,28,229,0.3)',
@@ -73,23 +73,22 @@ module.exports = {
     // including the 6 x 6 color cubes and the grayscale map, just provide
     // an array here instead of a color map object
     colors: {
-      black: '#292A2B',
-      red: '#FF2C6D',
-      green: '#19f9d8',
-      yellow: '#FFB86C',
-      blue: '#45A9F9',
-      magenta: '#FF75B5',
-      cyan: '#6FC1FF',
-      white: '#FFFFFF',
-      orange: '#B084EB',
-      lightBlack: '#686868',
-      lightRed: '#FF2C6D',
-      lightGreen: '#19f9d8',
-      lightYellow: '#ffcc95',
-      lightBlue: '#6FC1FF',
-      lightMagenta: '#FF9AC1',
-      lightCyan: '#6FC1FF',
-      lightWhite: '#FFFFFF',
+	black: '#565575',
+  	red: '#ff8080',
+  	green: '#95ffa4',
+  	yellow: '#ffe9aa',
+  	blue: '#91ddff',
+  	magenta: '#c991e1',
+  	cyan: '#aaffe4',
+ 	white: '#cbe3e7',
+  	lightBlack: '#100e23',
+  	lightRed: '#ff5458',
+  	lightGreen: '#62d196',
+  	lightYellow: '#ffb378',
+  	lightBlue: '#65b2ff',
+  	lightMagenta: '#906cff',
+  	lightCyan: '#63f2f1',
+  	lightWhite: '#a6b3cc'
     },
 
     shell: '/bin/zsh',
