@@ -1,13 +1,21 @@
 #!/bin/bash
 
-set -e
+set -ex
 
 # TODO: prompt keep old
+function install() {
+    local NAME=$1
+    local FPATH=$2
 
-[ -f "$HOME/.hyper.js" ] && mv -i $HOME/.hyper.js $HOME/.hyper.old.js
-cp .hyper.js $HOME/
+    [ -f "$FPATH/$NAME" ]  && mv -i "$FPATH/$NAME" "$FPATH/$NAME.old"
+    cp "./$NAME" "$FPATH/$NAME"
+}
 
-[ -f "$HOME/.zshrc" ] && mv -i $HOME/.zshrc $HOME/.zshrc.old
-cp .zshrc $HOME/
+echo ".hyper.js..."
+install .hyper.js $HOME
 
-# settings.json?
+echo ".zshrc..."
+install .zshrc $HOME
+
+echo "settings.json..."
+install settings.json "$HOME/Library/Application Support/Code/User"
