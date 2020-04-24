@@ -2,6 +2,7 @@ ZSH_TMUX_AUTOSTART="true"
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/fernando/.oh-my-zsh
 ZSH_THEME="typewritten"
+TYPEWRITTEN_CURSOR="block"
 CASE_SENSITIVE="true"
 export UPDATE_ZSH_DAYS=5
 
@@ -21,7 +22,7 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 #GO
-export GOPATH=/Users/fernando/Development/go
+export GOPATH=/Users/fernando/go
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
 
@@ -41,14 +42,6 @@ alias unstage="git reset HEAD"
 
 #Glances 
 export PATH=$PATH:~/glances/bin
-
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /Users/fernando/.nvm/versions/node/v8.5.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/fernando/.nvm/versions/node/v8.5.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /Users/fernando/.nvm/versions/node/v8.5.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/fernando/.nvm/versions/node/v8.5.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
-
 
 #md5
 alias md5q="md5 -q" 
@@ -100,4 +93,9 @@ function aws_done {
 
 alias awsp="aws_prof"
 alias done="aws_done"
-awsp
+
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
+
+export FZF_DEFAULT_OPTS="--extended"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
