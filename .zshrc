@@ -1,6 +1,6 @@
 ZSH_TMUX_AUTOSTART="true"
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/fernando/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="typewritten"
 TYPEWRITTEN_CURSOR="block"
 CASE_SENSITIVE="true"
