@@ -1,4 +1,4 @@
-ZSH_TMUX_AUTOSTART="true"
+ZSH_TMUX_AUTOSTART="false"
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="typewritten"
@@ -63,7 +63,7 @@ export EDITOR="nano -m -c"
 alias knrd="sudo ~/.tools/vpn.sh"
 
 back() {
-  cd $OLDPWD
+  cd -
 }
 
 alias a="az"
@@ -99,3 +99,5 @@ export PATH="/usr/local/opt/openjdk/bin:$PATH"
 export FZF_DEFAULT_OPTS="--extended"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
+alias vbm=VBoxManage
