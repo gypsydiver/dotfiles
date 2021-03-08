@@ -12,7 +12,7 @@ module.exports = {
     fontSize: 14,
 
     // font family with optional fallbacks
-    fontFamily: 'Hasklig',
+    fontFamily: 'Victor Mono',
 
     // default font weight: 'normal' or 'bold'
     fontWeight: 'normal',
@@ -52,7 +52,7 @@ module.exports = {
     borderColor: '#333',
 
     // custom CSS to embed in the main window
-    css: ``,
+    css: '',
 
     // custom CSS to embed in the terminal window
     termCSS: '',
@@ -73,22 +73,22 @@ module.exports = {
     // including the 6 x 6 color cubes and the grayscale map, just provide
     // an array here instead of a color map object
     colors: {
-	black: '#565575',
-  	red: '#ff8080',
-  	green: '#95ffa4',
-  	yellow: '#ffe9aa',
-  	blue: '#91ddff',
-  	magenta: '#c991e1',
-  	cyan: '#aaffe4',
- 	white: '#cbe3e7',
-  	lightBlack: '#100e23',
-  	lightRed: '#ff5458',
-  	lightGreen: '#62d196',
-  	lightYellow: '#ffb378',
-  	lightBlue: '#65b2ff',
-  	lightMagenta: '#906cff',
-  	lightCyan: '#63f2f1',
-  	lightWhite: '#a6b3cc'
+      black: '#565575',
+      red: '#ff8080',
+      green: '#95ffa4',
+      yellow: '#ffe9aa',
+      blue: '#91ddff',
+      magenta: '#c991e1',
+      cyan: '#aaffe4',
+      white: '#cbe3e7',
+      lightBlack: '#100e23',
+      lightRed: '#ff5458',
+      lightGreen: '#62d196',
+      lightYellow: '#ffb378',
+      lightBlue: '#65b2ff',
+      lightMagenta: '#906cff',
+      lightCyan: '#63f2f1',
+      lightWhite: '#a6b3cc'
     },
 
     shell: '/bin/zsh',
