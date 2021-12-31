@@ -95,11 +95,21 @@ alias fertig="aws_done"
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
 alias vbm=VBoxManage
 
-alias tf="/Users/fernando/Downloads/terraform"
-alias terraform="/Users/fernando/Downloads/terraform"
+alias tf="terraform"
 alias startkali="vbm startvm REDACTED"
 
 alias config='GIT_WORK_TREE="$HOME" GIT_DIR="$HOME"/Development/dotfiles git -c status.showUntrackedFiles=no'
 nd() { nano -m -c "$HOME/$(config ls-tree --full-tree --name-only -r HEAD | fzf)" }
 alias cst="config status"
 
+# 1password
+1pon() {
+  eval $(op signin REDACTED)
+}
+
+1poff() {
+  op signout
+  unset OP_SESSION_REDACTED
+}
+
+alias REDACTED-vpn="op get item "OpenConnect" --fields password | REDACTED -u REDACTED -p REDACTED"
