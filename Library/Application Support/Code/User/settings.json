@@ -1,104 +1,76 @@
 {
-    "markdown-checkbox.withBulletPoint": false,
-    "telemetry.enableTelemetry": false,
-    "telemetry.enableCrashReporter": false,
-    "explorer.confirmDragAndDrop": false,
-    "explorer.confirmDelete": false,
-    "trailing-spaces.trimOnSave": true,
-    "editor.scrollBeyondLastLine": false,
-    "editor.minimap.enabled": false,
-    "editor.smoothScrolling": true,
-    "editor.fontLigatures": true,
-    "editor.fontFamily": "Source Code Pro",
-    "go.formatTool":"goimports",
-    "go.lintTool": "golangci-lint",
-    "go.lintFlags": ["--enable-all", "--new"],
-    "go.useLanguageServer": true,
-    "go.gocodeAutoBuild": false,
-    "go.goroot": "/usr/local/Cellar/go/1.14.4/libexec",
-    "go.docsTool": "gogetdoc",
-    "workbench.colorTheme": "Gruvbox Material Dark",
-    "workbench.colorCustomizations": {
-        "activityBarBadge.background": "#FF4081",
-        "list.activeSelectionForeground": "#FF4081",
-        "list.inactiveSelectionForeground": "#FF4081",
-        "list.highlightForeground": "#FF4081",
-        "scrollbarSlider.activeBackground": "#FF408150",
-        "editorSuggestWidget.highlightForeground": "#FF4081",
-        "textLink.foreground": "#FF4081",
-        "progressBar.background": "#FF4081",
-        "pickerGroup.foreground": "#FF4081",
-        "tab.activeBorder": "#FF4081",
-        "notificationLink.foreground": "#FF4081",
-        "editorWidget.resizeBorder": "#FF4081",
-        "editorWidget.border": "#FF4081",
-        "settings.headerForeground": "#FF4081",
-        "panelTitle.activeBorder": "#FF4081",
-        "breadcrumb.activeSelectionForeground": "#FF4081",
-        "menu.selectionForeground": "#FF4081",
-        "menubar.selectionForeground": "#FF4081"
-    },
-    "materialTheme.accent": "Pink",
-    "window.nativeTabs": true,
-    "editor.minimap.renderCharacters": false,
-    "files.associations": {
-        "*.ng": "shellscript"
-    },
-    "shellcheck.enable": true,
-    "shellcheck.executablePath": "/usr/local/bin/shellcheck",
-    "shellcheck.ignorePatterns": {
-        "**/*.ng": true
-    },
-    "files.insertFinalNewline": true,
-    "atomKeymap.promptV3Features": true,
-    "editor.multiCursorModifier": "ctrlCmd",
-    "editor.formatOnPaste": true,
-    "terraform.telemetry.enabled": false,
-    "metals.javaHome": "/Users/fernando/.jabba/jdk/adopt@1.11.0-6/Contents/Home",
-    "cSpell.userWords": [
-        "hivemind"
-    ],
-    "purescript.addNpmPath": true,
-    "purescript.addSpagoSources": true,
-    "purescript.buildCommand": "npx spago build --purs-args=\"json-errors\"",
-    "purescript.trace.server": "messages",
-    "purty.pathToPurty": "node_modules/purty/bin/osx/purty",
-    "files.autoSave": "onFocusChange",
-    "cSpell.language": "en",
-    "editor.tabSize": 2,
-    "javascript.format.semicolons": "remove",
-    "typescript.format.semicolons": "remove",
-    "[typescript]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
-    },
-    "[markdown]": {
-        "editor.defaultFormatter": "yzhang.markdown-all-in-one"
-    },
-    "files.watcherExclude": {
-        "**/.bloop": true,
-        "**/.metals": true,
-        "**/.ammonite": true
-    },
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "go.toolsManagement.autoUpdate": true,
-    "workbench.editorAssociations": {
-        "*.ipynb": "jupyter.notebook.ipynb"
-    },
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "gitlens.advanced.messages": {
-        "suppressGitMissingWarning": true
-    },
-    "docker.showStartPage": false,
-    "go.gopath": "/Users/Development/go",
-    "python.pythonPath": "/Users/fernando/.pyenv/versions/3.9.0/bin/python",
-    "window.zoomLevel": 2,
-    "npm.autoDetect": "off",
-    "redhat.telemetry.enabled": false
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "trailing-spaces.trimOnSave": true,
+  "editor.scrollBeyondLastLine": false,
+  "editor.minimap.enabled": false,
+  "editor.smoothScrolling": true,
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "Source Code Pro",
+  "go.formatTool": "goimports",
+  "go.lintTool": "golangci-lint",
+  "go.lintFlags": ["--enable-all", "--new"],
+  "go.useLanguageServer": true,
+  "go.gocodeAutoBuild": false,
+  "go.docsTool": "gogetdoc",
+  "workbench.colorTheme": "Gruvbox Material Dark",
+  "workbench.colorCustomizations": {
+    "activityBarBadge.background": "#FF4081",
+    "list.activeSelectionForeground": "#FF4081",
+    "list.inactiveSelectionForeground": "#FF4081",
+    "list.highlightForeground": "#FF4081",
+    "scrollbarSlider.activeBackground": "#FF408150",
+    "editorSuggestWidget.highlightForeground": "#FF4081",
+    "textLink.foreground": "#FF4081",
+    "progressBar.background": "#FF4081",
+    "pickerGroup.foreground": "#FF4081",
+    "tab.activeBorder": "#FF4081",
+    "notificationLink.foreground": "#FF4081",
+    "editorWidget.resizeBorder": "#FF4081",
+    "editorWidget.border": "#FF4081",
+    "settings.headerForeground": "#FF4081",
+    "panelTitle.activeBorder": "#FF4081",
+    "breadcrumb.activeSelectionForeground": "#FF4081",
+    "menu.selectionForeground": "#FF4081",
+    "menubar.selectionForeground": "#FF4081"
+  },
+  "window.nativeTabs": true,
+  "editor.minimap.renderCharacters": false,
+  "files.associations": {
+    "*.ng": "shellscript"
+  },
+  "files.insertFinalNewline": true,
+  "atomKeymap.promptV3Features": true,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.formatOnPaste": true,
+  "files.autoSave": "onFocusChange",
+  "editor.tabSize": 2,
+  "javascript.format.semicolons": "remove",
+  "typescript.format.semicolons": "remove",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "files.watcherExclude": {
+    "**/.bloop": true,
+    "**/.metals": true,
+    "**/.ammonite": true
+  },
+  "gitlens.advanced.messages": {
+    "suppressGitMissingWarning": true
+  },
+  "go.gopath": "/Users/fernando/Development/go",
+  "npm.autoDetect": "off",
+  "redhat.telemetry.enabled": false,
+  "[go]": {
+    "editor.defaultFormatter": "golang.go"
+  },
+  "go.toolsManagement.autoUpdate": true,
+  "window.zoomLevel": 1,
+  "telemetry.telemetryLevel": "off",
+  "gitlens.telemetry.enabled": false,
+  "intelephense.telemetry.enabled": false,
+  "python.experiments.optInto": [],
+  "workbench.enableExperiments": false,
+  "workbench.settings.enableNaturalLanguageSearch": false
 }
