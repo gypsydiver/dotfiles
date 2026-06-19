@@ -13,7 +13,6 @@
   "go.useLanguageServer": true,
   "go.gocodeAutoBuild": false,
   "go.docsTool": "gogetdoc",
-  "workbench.colorTheme": "Gruvbox Material Dark",
   "workbench.colorCustomizations": {
     "activityBarBadge.background": "#FF4081",
     "list.activeSelectionForeground": "#FF4081",
@@ -66,11 +65,39 @@
     "editor.defaultFormatter": "golang.go"
   },
   "go.toolsManagement.autoUpdate": true,
-  "window.zoomLevel": 1,
   "telemetry.telemetryLevel": "off",
   "gitlens.telemetry.enabled": false,
   "intelephense.telemetry.enabled": false,
   "python.experiments.optInto": [],
   "workbench.enableExperiments": false,
-  "workbench.settings.enableNaturalLanguageSearch": false
+  "workbench.settings.enableNaturalLanguageSearch": false,
+  "editor.codeActionsOnSave": {
+
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "metals.javaHome": "/Users/fernando/.jabba/jdk/openjdk@1.17.0/Contents/Home",
+  "window.zoomLevel": 1,
+  "[yaml]": {
+  "editor.formatOnSave": false
+  },
+  "go.lintOnSave": "file",
+  "includeDocumentStart": true,
+  "settingsSync.ignoredSettings": [
+
+  ],
+  "gitlens.launchpad.indicator.enabled": false,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "rust": false
+  },
+  "[terraform-vars]": {
+    "editor.defaultFormatter": "hashicorp.terraform"
+  },
+  "editor.formatOnSave": true,
+  "workbench.colorTheme": "Dark Modern"
 }
