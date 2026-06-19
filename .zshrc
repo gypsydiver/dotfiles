@@ -2,7 +2,7 @@ setopt hist_ignore_all_dups
 setopt hist_ignore_space
 export HISTSIZE=99999999999
 export SAVEHIST=$HISTSIZE
-
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -67,12 +67,14 @@ alias md5sum="md5 -r"
 # handy k8s
 alias k="kubectl"
 #alias kcfg="kubectl config"
-#alias contexts="kubectl config get-contexts"
+alias contexts="kubectl config get-contexts"
 #alias use-context="kubectl config use-context"
 #alias kd="kubectl describe"
 #alias kdel="kubectl delete"
 #alias ked="kubectl edit"
 #alias kx="kubectl exec -ti"
+alias k9="k9s --headless --crumbsless"
+
 export EDITOR="nvim"
 alias nano="nvim"
 
@@ -84,33 +86,35 @@ export BAT_THEME="TwoDark"
 alias cat="bat"
 
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
-alias vbm=VBoxManage
 
 alias tf="terraform"
-alias startkali="vbm startvm REDACTED"
 
 alias config='GIT_WORK_TREE="$HOME" GIT_DIR="$HOME"/Development/dotfiles git -c status.showUntrackedFiles=no'
 nd() { nano -m -c "$HOME/$(config ls-tree --full-tree --name-only -r HEAD | fzf)" }
 alias cst="config status"
-
-# 1password
-1pon() {
-  eval $(op signin --account REDACTED)
-}
-
-1poff() {
-  op signout
-  unset OP_SESSION_REDACTED
-}
 
 eval "$(zoxide init zsh)"
 
 alias ss="sudo lsof -P -i TCP -s TCP:LISTEN"
 alias grep="rg"
 alias ls="lsd --icon never"
-alias REDACTED-vpn="op read op://Private/OpenConnect/password | REDACTED -u REDACTED -p REDACTED"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 export PATH="/usr/local/opt/openssl@3/bin:$PATH"
 source ~/powerlevel10k/powerlevel10k.zsh-theme
+
+# productivity aliases (from history analysis)
+alias tff="terraform fmt -recursive ."
+alias c="code ."
+alias cr="cargo run"
+alias awsme="aws sts get-caller-identity"
+asl() { aws sso login --profile "$1"; }
+alias dnscheck="scutil --dns | command grep 'nameserver\[[0-9]*\]'"
+kctx() { kubectl config use-context "$(kubectl config get-contexts -o name | fzf)"; }
+k9c() { k9s --headless --crumbsless --context "$(kubectl config get-contexts -o name | fzf)"; }
+alias cheat="bat ~/.cheatsheet.md"
+
+eval "$(atuin init zsh)"
+. "$HOME/.cargo/env"
+export PATH="$HOME/.local/bin:$PATH"
