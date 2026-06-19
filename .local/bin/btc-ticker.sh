@@ -8,11 +8,11 @@
 #
 # Usage:
 #   btc-ticker.sh            # uses defaults below
-#   CURRENCY=EUR btc-ticker.sh
+#   CURRENCY=USD btc-ticker.sh
 #
 set -euo pipefail
 
-CURRENCY="${CURRENCY:-USD}"
+CURRENCY="${CURRENCY:-EUR}"
 CACHE_TTL="${CACHE_TTL:-60}"                       # seconds between refreshes
 CACHE_FILE="${TMPDIR:-/tmp}/btc-ticker-${CURRENCY}.cache"
 SYMBOL="${SYMBOL:-₿}"
